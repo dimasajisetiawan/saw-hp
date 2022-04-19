@@ -3,7 +3,7 @@
 
 ## Instalasi
 
-1. Pertama : Import saw-laptop.sql pada root directory (direktori luar, pastikan juga database dibuat terlebih dahulu dengan nama database sesuai dengan nama file sql)
+1. Pertama : Import saw-hp.sql pada root directory (direktori luar, pastikan juga database dibuat terlebih dahulu dengan nama database sesuai dengan nama file sql)
 2. Kedua : lakukan perintah composer require realrashid/sweet-alert pada terminal vscode
 3. Ketiga : lakukan perintah php artisan sweetalert:publish pada terminal vscode
 
