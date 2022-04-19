@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Apr 19, 2022 at 06:30 AM
+-- Generation Time: Apr 19, 2022 at 03:22 PM
 -- Server version: 5.7.33
 -- PHP Version: 8.0.11
 
@@ -51,6 +51,16 @@ CREATE TABLE `kriteria_harga` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `kriteria_harga`
+--
+
+INSERT INTO `kriteria_harga` (`id_kriteria_harga`, `pilihan_kriteria`, `bobot_kriteria`, `created_at`, `updated_at`) VALUES
+(1, '2-3 Juta', 2, '2022-04-19 07:33:58', '2022-04-19 07:33:58'),
+(2, '3-4 Juta', 3, '2022-04-19 07:33:58', '2022-04-19 07:33:58'),
+(3, '4-5 Juta', 4, '2022-04-19 07:33:58', '2022-04-19 07:33:58'),
+(4, '>5 Juta', 5, '2022-04-19 07:33:58', '2022-04-19 07:33:58');
+
 -- --------------------------------------------------------
 
 --
@@ -64,6 +74,15 @@ CREATE TABLE `kriteria_penyimpanan` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `kriteria_penyimpanan`
+--
+
+INSERT INTO `kriteria_penyimpanan` (`id_kriteria_penyimpanan`, `pilihan_kriteria`, `bobot_kriteria`, `created_at`, `updated_at`) VALUES
+(1, '64 GB', 1, '2022-04-19 07:33:58', '2022-04-19 07:33:58'),
+(2, '128 GB', 3, '2022-04-19 07:33:58', '2022-04-19 07:33:58'),
+(3, '256 GB', 5, '2022-04-19 07:33:58', '2022-04-19 07:33:58');
 
 -- --------------------------------------------------------
 
@@ -79,6 +98,15 @@ CREATE TABLE `kriteria_processor` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `kriteria_processor`
+--
+
+INSERT INTO `kriteria_processor` (`id_kriteria_processor`, `pilihan_kriteria`, `bobot_kriteria`, `created_at`, `updated_at`) VALUES
+(1, 'QUAD-CORE PROCESSOR', 1, '2022-04-19 07:33:58', '2022-04-19 07:33:58'),
+(2, 'HEXA-CORE PROCESSOR', 3, '2022-04-19 07:33:58', '2022-04-19 07:33:58'),
+(3, 'OCTA-CORE PROCESSOR', 5, '2022-04-19 07:33:58', '2022-04-19 07:33:58');
+
 -- --------------------------------------------------------
 
 --
@@ -93,6 +121,16 @@ CREATE TABLE `kriteria_ram` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `kriteria_ram`
+--
+
+INSERT INTO `kriteria_ram` (`id_kriteria_ram`, `pilihan_kriteria`, `bobot_kriteria`, `created_at`, `updated_at`) VALUES
+(1, '4 GB', 2, '2022-04-19 07:33:58', '2022-04-19 07:33:58'),
+(2, '6 GB', 3, '2022-04-19 07:33:58', '2022-04-19 07:33:58'),
+(3, '8 GB', 4, '2022-04-19 07:33:58', '2022-04-19 07:33:58'),
+(4, '12 GB', 5, '2022-04-19 07:33:58', '2022-04-19 07:33:58');
+
 -- --------------------------------------------------------
 
 --
@@ -106,6 +144,15 @@ CREATE TABLE `kriteria_slot_sim` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `kriteria_slot_sim`
+--
+
+INSERT INTO `kriteria_slot_sim` (`id_kriteria_slot_sim`, `pilihan_kriteria`, `bobot_kriteria`, `created_at`, `updated_at`) VALUES
+(1, 'Dual Slim Only', 1, '2022-04-19 07:33:58', '2022-04-19 07:33:58'),
+(2, 'Dual Slim Hybrid', 3, '2022-04-19 07:33:58', '2022-04-19 07:33:58'),
+(3, 'Triple Slot', 5, '2022-04-19 07:33:58', '2022-04-19 07:33:58');
 
 -- --------------------------------------------------------
 
@@ -222,7 +269,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `name`, `username`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Dimas Aji Setiawan', 'admin', 'dimazaji619@gmail.com', NULL, '$2y$10$SLxWv50eUxwpJJCmyoJOmO9ulual32etXSYxgt9f6QAkCYorSQ8lW', NULL, '2022-04-18 22:46:08', '2022-04-18 22:46:08');
+(1, 'Dimas Aji Setiawan', 'admin', 'dimazaji619@gmail.com', NULL, '$2y$10$6lE.kbCoowK4yWZy5/MEzeUCMVK20e/6VJRHdQ/PoSq869BvXAYUO', NULL, '2022-04-19 07:33:58', '2022-04-19 07:33:58');
 
 --
 -- Indexes for dumped tables
@@ -326,31 +373,31 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `kriteria_harga`
 --
 ALTER TABLE `kriteria_harga`
-  MODIFY `id_kriteria_harga` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_kriteria_harga` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `kriteria_penyimpanan`
 --
 ALTER TABLE `kriteria_penyimpanan`
-  MODIFY `id_kriteria_penyimpanan` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_kriteria_penyimpanan` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `kriteria_processor`
 --
 ALTER TABLE `kriteria_processor`
-  MODIFY `id_kriteria_processor` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_kriteria_processor` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `kriteria_ram`
 --
 ALTER TABLE `kriteria_ram`
-  MODIFY `id_kriteria_ram` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_kriteria_ram` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `kriteria_slot_sim`
 --
 ALTER TABLE `kriteria_slot_sim`
-  MODIFY `id_kriteria_slot_sim` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_kriteria_slot_sim` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `migrations`

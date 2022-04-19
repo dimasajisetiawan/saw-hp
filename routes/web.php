@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\KriteriaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,4 @@ Route::post('/',[LoginController::class,'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/dashboard', [DashboardController::class,'index'])->middleware('auth');
+Route::get('/data_kriteria', [KriteriaController::class,'index'])->middleware('auth');

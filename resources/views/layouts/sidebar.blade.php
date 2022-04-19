@@ -30,33 +30,25 @@
           </p>
         </a>
       </li>
-      <li class="nav-item {{ Request::is('#') ? 'menu-is-opening menu-open' : "" }}"">
-        <a href="/dashboard" class="nav-link {{ Request::is('#') ? 'active' : "" }}">
-          <i class="nav-icon fas fa-tachometer-alt"></i>
+      <li class="nav-item {{ Request::is('data_kriteria*') ? 'menu-is-opening menu-open' : "" }}"">
+        <a href="/data_kriteria" class="nav-link {{ Request::is('data_kriteria*') ? 'active' : "" }}">
+          <i class="nav-icon fas fa-list-alt"></i>
           <p>
             Data Kriteria
           </p>
         </a>
       </li>
-      <li class="nav-item {{ Request::is('#') ? 'menu-is-opening menu-open' : "" }}"">
-        <a href="/dashboard" class="nav-link {{ Request::is('#') ? 'active' : "" }}">
-          <i class="nav-icon fas fa-tachometer-alt"></i>
+      <li class="nav-item {{ Request::is('data_smartphone*') ? 'menu-is-opening menu-open' : "" }}"">
+        <a href="/data_smartphone" class="nav-link {{ Request::is('data_smartphone*') ? 'active' : "" }}">
+          <i class="nav-icon fas fa-mobile-alt"></i>
           <p>
             Data Smartphone
           </p>
         </a>
       </li>
-      <li class="nav-item {{ Request::is('#') ? 'menu-is-opening menu-open' : "" }}"">
-        <a href="/dashboard" class="nav-link {{ Request::is('#') ? 'active' : "" }}">
-          <i class="nav-icon fas fa-tachometer-alt"></i>
-          <p>
-            Data Smartphone
-          </p>
-        </a>
-      </li>
-      <li class="nav-item {{ Request::is('#') ? 'menu-is-opening menu-open' : "" }}"">
-        <a href="/dashboard" class="nav-link {{ Request::is('#') ? 'active' : "" }}">
-          <i class="nav-icon fas fa-tachometer-alt"></i>
+      <li class="nav-item {{ Request::is('nilai') ? 'menu-is-opening menu-open' : "" }}"">
+        <a href="/dashboard" class="nav-link {{ Request::is('nilai') ? 'active' : "" }}">
+          <i class="nav-icon fas fa-file-alt"></i>
           <p>
             Nilai
           </p>
