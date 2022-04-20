@@ -22,3 +22,11 @@ Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/dashboard', [DashboardController::class,'index'])->middleware('auth');
 Route::get('/data_kriteria', [KriteriaController::class,'index'])->middleware('auth');
+
+Route::get('/data_kriteria/edit_penyimpanan/{id}', [KriteriaController::class,'view_edit_kriteria_penyimpanan'])->middleware('auth');
+Route::put('/edit_penyimpanan/{id}', [KriteriaController::class,'update_edit_kriteria_penyimpanan'])->middleware('auth');
+
+Route::get('/data_kriteria/edit_ram/{id}', [KriteriaController::class,'view_edit_kriteria_ram'])->middleware('auth');
+Route::get('/data_kriteria/edit_processor/{id}', [KriteriaController::class,'view_edit_kriteria_processor'])->middleware('auth');
+Route::get('/data_kriteria/edit_slot_sim/{id}', [KriteriaController::class,'view_edit_kriteria_slot_sim'])->middleware('auth');
+Route::get('/data_kriteria/edit_harga/{id}', [KriteriaController::class,'view_edit_kriteria_harga'])->middleware('auth');
