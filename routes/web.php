@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\KriteriaController;
+use App\Http\Controllers\SmartphoneController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,17 @@ Route::get('/data_kriteria/edit_penyimpanan/{id}', [KriteriaController::class,'v
 Route::put('/edit_penyimpanan/{id}', [KriteriaController::class,'update_edit_kriteria_penyimpanan'])->middleware('auth');
 
 Route::get('/data_kriteria/edit_ram/{id}', [KriteriaController::class,'view_edit_kriteria_ram'])->middleware('auth');
+Route::put('/edit_ram/{id}', [KriteriaController::class,'update_edit_kriteria_ram'])->middleware('auth');
+
 Route::get('/data_kriteria/edit_processor/{id}', [KriteriaController::class,'view_edit_kriteria_processor'])->middleware('auth');
+Route::put('/edit_processor/{id}', [KriteriaController::class,'update_edit_kriteria_processor'])->middleware('auth');
+
 Route::get('/data_kriteria/edit_slot_sim/{id}', [KriteriaController::class,'view_edit_kriteria_slot_sim'])->middleware('auth');
+Route::put('/edit_slot_sim/{id}', [KriteriaController::class,'update_edit_kriteria_slot_sim'])->middleware('auth');
+
 Route::get('/data_kriteria/edit_harga/{id}', [KriteriaController::class,'view_edit_kriteria_harga'])->middleware('auth');
+Route::put('/edit_harga/{id}', [KriteriaController::class,'update_edit_kriteria_harga'])->middleware('auth');
+
+Route::get('/data_smartphone', [SmartphoneController::class,'index'])->middleware('auth');
+Route::get('/data_smartphone/create_smartphone', [SmartphoneController::class,'view_insert_smartphone'])->middleware('auth');
+Route::post('/data_smartphone/create_smartphone/process', [SmartphoneController::class,'insert_smartphone'])->middleware('auth');

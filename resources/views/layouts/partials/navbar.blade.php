@@ -9,19 +9,18 @@
         <a href="/" class="nav-link">Home</a>
       </li>
     </ul>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item">
         <form action="/logout" method="POST">
           @csrf
-          <button type="submit" class="nav-link px-3 bg-dark border-0">
+          <button class="btn btn-dark" type="submit" class="nav-link px-3 bg-dark border-0">
         Logout
         <span data-feather="log-out"></span>
           </button>
         </form>
+          </li>
+        </ul>
 
     <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto">
-    </ul>
   </nav>
   <!-- /.navbar -->

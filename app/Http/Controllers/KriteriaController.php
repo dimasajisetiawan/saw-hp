@@ -13,7 +13,7 @@ class KriteriaController extends Controller
 {
     public function index()
     {
-        return view('kriteria.dashboard',[
+        return view('kriteria.index',[
             'pny' => Kriteria_Penyimpanan::paginate(4),
             'rm' => Kriteria_Ram::paginate(4),
             'proc' => Kriteria_Processor::paginate(3),
@@ -82,6 +82,31 @@ class KriteriaController extends Controller
     {
         $validatedData['bobot_kriteria'] = $request->bobot_kriteria;
         Kriteria_Penyimpanan::where('id_kriteria_penyimpanan',$id)->update($validatedData);
+        return redirect('data_kriteria')->with('success','Kriteria telah diubah!');
+    }
+
+    public function Update_edit_kriteria_ram(Request $request, $id)
+    {
+        $validatedData['bobot_kriteria'] = $request->bobot_kriteria;
+        Kriteria_Ram::where('id_kriteria_ram',$id)->update($validatedData);
+        return redirect('data_kriteria')->with('success','Kriteria telah diubah!');
+    }
+    public function Update_edit_kriteria_processor(Request $request, $id)
+    {
+        $validatedData['bobot_kriteria'] = $request->bobot_kriteria;
+        Kriteria_Processor::where('id_kriteria_processor',$id)->update($validatedData);
+        return redirect('data_kriteria')->with('success','Kriteria telah diubah!');
+    }
+    public function Update_edit_kriteria_slot_sim(Request $request, $id)
+    {
+        $validatedData['bobot_kriteria'] = $request->bobot_kriteria;
+        Kriteria_Slot_Sim::where('id_kriteria_slot_sim',$id)->update($validatedData);
+        return redirect('data_kriteria')->with('success','Kriteria telah diubah!');
+    }
+    public function Update_edit_kriteria_harga(Request $request, $id)
+    {
+        $validatedData['bobot_kriteria'] = $request->bobot_kriteria;
+        Kriteria_Harga::where('id_kriteria_harga',$id)->update($validatedData);
         return redirect('data_kriteria')->with('success','Kriteria telah diubah!');
     }
 }

@@ -2,13 +2,15 @@
 @section('container')
     <section class="content">
         <div class="container-fluid">
-            <div class="card">
+            <div class="row p-3">
+                <div class="col-md-6">
+            <div class="card card-success shadow">
                 <div class="card-header">
                     <h4 class="card-title">Kriteria Penyimpanan (C1)</h4>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-                    <table class="table table-bordered">
+                    <table class="table table-bordered text-center">
                         <thead>
                             <tr>
                                 <th scope="col">No</th>
@@ -24,11 +26,7 @@
                                     <td>{{ $penyimpanan->pilihan_kriteria }}</td>
                                     <td>{{ $penyimpanan->bobot_kriteria }}</td>
                                     <td>
-                                        <a class="btn btn-app bg-info "
-                                            href="
-                                            /data_kriteria/edit_penyimpanan/{{ $penyimpanan->id_kriteria_penyimpanan }}">
-                                            <i class="fas fa-cog"></i> Ubah
-                                        </a>
+                                        <a class="btn btn-primary" href="/data_kriteria/edit_penyimpanan/{{ $penyimpanan->id_kriteria_penyimpanan }}"> Ubah</a>
                                     </td>
                             </tr>
                             @endforeach
@@ -36,13 +34,15 @@
                     </table>
                 </div>
             </div>
-            <div class="card">
+        </div>
+            <div class="col-md-6">
+            <div class="card card-success shadow">
                 <div class="card-header">
                     <h4 class="card-title">Kriteria Ram (C2)</h4>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-                    <table class="table table-bordered">
+                    <table class="table table-bordered text-center">
                         <thead>
                             <tr>
                                 <th scope="col">No</th>
@@ -58,25 +58,29 @@
                                     <td>{{ $ram->pilihan_kriteria }}</td>
                                     <td>{{ $ram->bobot_kriteria }}</td>
                                     <td>
-                                        <a class="btn btn-app bg-info "
+                                        <a class="btn btn-primary "
                                             href="
                                             /data_kriteria/edit_ram/{{ $ram->id_kriteria_ram }}">
-                                            <i class="fas fa-cog"></i> Ubah
+                                            Ubah
                                         </a>
+
                                     </td>
                             </tr>
                             @endforeach
                         </tbody>
                     </table>
                 </div>
+
             </div>
-            <div class="card">
+        </div>
+            <div class="col-md-6">
+            <div class="card card-success shadow">
                 <div class="card-header">
                     <h4 class="card-title">Kriteria Processor (C3)</h4>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-                    <table class="table table-bordered">
+                    <table class="table table-bordered text-center">
                         <thead>
                             <tr>
                                 <th scope="col">No</th>
@@ -92,25 +96,29 @@
                                     <td>{{ $processor->pilihan_kriteria }}</td>
                                     <td>{{ $processor->bobot_kriteria }}</td>
                                     <td>
-                                        <a class="btn btn-app bg-info "
+                                        <a class="btn btn-primary "
                                             href="
                                             /data_kriteria/edit_processor/{{ $processor->id_kriteria_processor }}">
-                                            <i class="fas fa-cog"></i> Ubah
+                                            Ubah
                                         </a>
+
                                     </td>
                             </tr>
                             @endforeach
                         </tbody>
                     </table>
                 </div>
+
             </div>
-            <div class="card">
+        </div>
+            <div class="col-md-6">
+            <div class="card card-success shadow">
                 <div class="card-header">
                     <h4 class="card-title">Kriteria Harga (C4)</h4>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-                    <table class="table table-bordered">
+                    <table class="table table-bordered text-center">
                         <thead>
                             <tr>
                                 <th scope="col">No</th>
@@ -126,10 +134,10 @@
                                     <td>{{ $harga->pilihan_kriteria }}</td>
                                     <td>{{ $harga->bobot_kriteria }}</td>
                                     <td>
-                                        <a class="btn btn-app bg-info "
+                                        <a class="btn btn-primary "
                                             href="
                                             /data_kriteria/edit_harga/{{ $harga->id_kriteria_harga }}">
-                                            <i class="fas fa-cog"></i> Ubah
+                                             Ubah
                                         </a>
                                     </td>
                             </tr>
@@ -138,13 +146,16 @@
                     </table>
                 </div>
             </div>
-            <div class="card">
+            </div>
+
+            <div class="col-md-6">
+            <div class="card card-success shadow">
                 <div class="card-header">
                     <h4 class="card-title">Kriteria Slot Sim (C5)</h4>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-                    <table class="table table-bordered">
+                    <table class="table table-bordered text-center">
                         <thead>
                             <tr>
                                 <th scope="col">No</th>
@@ -160,10 +171,10 @@
                                     <td>{{ $slot_sim->pilihan_kriteria }}</td>
                                     <td>{{ $slot_sim->bobot_kriteria }}</td>
                                     <td>
-                                        <a class="btn btn-app bg-info "
+                                        <a class="btn btn-primary "
                                             href="
                                             /data_kriteria/edit_slot_sim/{{ $slot_sim->id_kriteria_slot_sim }}">
-                                            <i class="fas fa-cog"></i> Ubah
+                                            Ubah
                                         </a>
                                     </td>
                             </tr>
@@ -172,6 +183,8 @@
                     </table>
                 </div>
             </div>
+
+        </div>
             <!-- /.row -->
             <!-- Main row -->
         </div><!-- /.container-fluid -->
