@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Apr 19, 2022 at 03:22 PM
+-- Generation Time: Apr 23, 2022 at 05:54 AM
 -- Server version: 5.7.33
 -- PHP Version: 8.0.11
 
@@ -59,7 +59,7 @@ INSERT INTO `kriteria_harga` (`id_kriteria_harga`, `pilihan_kriteria`, `bobot_kr
 (1, '2-3 Juta', 2, '2022-04-19 07:33:58', '2022-04-19 07:33:58'),
 (2, '3-4 Juta', 3, '2022-04-19 07:33:58', '2022-04-19 07:33:58'),
 (3, '4-5 Juta', 4, '2022-04-19 07:33:58', '2022-04-19 07:33:58'),
-(4, '>5 Juta', 5, '2022-04-19 07:33:58', '2022-04-19 07:33:58');
+(4, '>5 Juta', 5, '2022-04-19 07:33:58', '2022-04-20 03:30:11');
 
 -- --------------------------------------------------------
 
@@ -80,9 +80,9 @@ CREATE TABLE `kriteria_penyimpanan` (
 --
 
 INSERT INTO `kriteria_penyimpanan` (`id_kriteria_penyimpanan`, `pilihan_kriteria`, `bobot_kriteria`, `created_at`, `updated_at`) VALUES
-(1, '64 GB', 1, '2022-04-19 07:33:58', '2022-04-19 07:33:58'),
+(1, '64 GB', 1, '2022-04-19 07:33:58', '2022-04-21 05:38:58'),
 (2, '128 GB', 3, '2022-04-19 07:33:58', '2022-04-19 07:33:58'),
-(3, '256 GB', 5, '2022-04-19 07:33:58', '2022-04-19 07:33:58');
+(3, '256 GB', 5, '2022-04-19 07:33:58', '2022-04-20 23:15:58');
 
 -- --------------------------------------------------------
 
@@ -105,7 +105,7 @@ CREATE TABLE `kriteria_processor` (
 INSERT INTO `kriteria_processor` (`id_kriteria_processor`, `pilihan_kriteria`, `bobot_kriteria`, `created_at`, `updated_at`) VALUES
 (1, 'QUAD-CORE PROCESSOR', 1, '2022-04-19 07:33:58', '2022-04-19 07:33:58'),
 (2, 'HEXA-CORE PROCESSOR', 3, '2022-04-19 07:33:58', '2022-04-19 07:33:58'),
-(3, 'OCTA-CORE PROCESSOR', 5, '2022-04-19 07:33:58', '2022-04-19 07:33:58');
+(3, 'OCTA-CORE PROCESSOR', 5, '2022-04-19 07:33:58', '2022-04-20 03:30:03');
 
 -- --------------------------------------------------------
 
@@ -129,7 +129,7 @@ INSERT INTO `kriteria_ram` (`id_kriteria_ram`, `pilihan_kriteria`, `bobot_kriter
 (1, '4 GB', 2, '2022-04-19 07:33:58', '2022-04-19 07:33:58'),
 (2, '6 GB', 3, '2022-04-19 07:33:58', '2022-04-19 07:33:58'),
 (3, '8 GB', 4, '2022-04-19 07:33:58', '2022-04-19 07:33:58'),
-(4, '12 GB', 5, '2022-04-19 07:33:58', '2022-04-19 07:33:58');
+(4, '12 GB', 5, '2022-04-19 07:33:58', '2022-04-20 03:29:56');
 
 -- --------------------------------------------------------
 
@@ -152,7 +152,7 @@ CREATE TABLE `kriteria_slot_sim` (
 INSERT INTO `kriteria_slot_sim` (`id_kriteria_slot_sim`, `pilihan_kriteria`, `bobot_kriteria`, `created_at`, `updated_at`) VALUES
 (1, 'Dual Slim Only', 1, '2022-04-19 07:33:58', '2022-04-19 07:33:58'),
 (2, 'Dual Slim Hybrid', 3, '2022-04-19 07:33:58', '2022-04-19 07:33:58'),
-(3, 'Triple Slot', 5, '2022-04-19 07:33:58', '2022-04-19 07:33:58');
+(3, 'Triple Slot', 5, '2022-04-19 07:33:58', '2022-04-20 03:30:18');
 
 -- --------------------------------------------------------
 
@@ -201,6 +201,14 @@ CREATE TABLE `nilai` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `nilai`
+--
+
+INSERT INTO `nilai` (`id_nilai`, `id_smartphone`, `id_kriteria_processor`, `id_kriteria_ram`, `id_kriteria_penyimpanan`, `id_kriteria_slot_sim`, `id_kriteria_harga`, `created_at`, `updated_at`) VALUES
+(1, 1, 1, 3, 2, 1, 4, '2022-04-22 19:43:54', '2022-04-22 19:43:54'),
+(2, 4, 2, 3, 3, 2, 2, '2022-04-22 19:49:56', '2022-04-22 19:49:56');
+
 -- --------------------------------------------------------
 
 --
@@ -245,6 +253,19 @@ CREATE TABLE `smartphone` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `smartphone`
+--
+
+INSERT INTO `smartphone` (`id_smartphone`, `merek_handphone`, `type_handphone`, `id_user`, `created_at`, `updated_at`) VALUES
+(1, 'Xiaomi', 'Mi 12 Pro', 1, '2022-04-21 06:48:29', '2022-04-21 06:48:29'),
+(2, 'Xiaomi', 'Poco X3 GT', 1, '2022-04-21 06:48:29', '2022-04-21 06:48:29'),
+(3, 'Xiaomi', 'Poco X4 Pro', 1, '2022-04-21 06:48:29', '2022-04-21 06:48:29'),
+(4, 'Xiaomi', 'Poco X3 Pro', 1, '2022-04-21 06:48:29', '2022-04-21 06:48:29'),
+(5, 'Xiaomi', 'Poco M4 Pro', 1, '2022-04-21 06:48:29', '2022-04-21 06:48:29'),
+(6, 'Xiaomi', 'Redmi Note 3 Pro', 1, '2022-04-21 11:59:50', '2022-04-21 11:59:50'),
+(7, 'Lenovo', 'A6000', 1, '2022-04-21 12:00:50', '2022-04-21 12:00:50');
 
 -- --------------------------------------------------------
 
@@ -409,7 +430,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `nilai`
 --
 ALTER TABLE `nilai`
-  MODIFY `id_nilai` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_nilai` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -421,7 +442,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `smartphone`
 --
 ALTER TABLE `smartphone`
-  MODIFY `id_smartphone` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_smartphone` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `users`
