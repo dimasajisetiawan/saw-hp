@@ -8,7 +8,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>
         @endif
-        <div class="row">
+        <div class="row p-3">
             <div class="col-md-6">
             <div class="card card-primary">
               <div class="card-header">

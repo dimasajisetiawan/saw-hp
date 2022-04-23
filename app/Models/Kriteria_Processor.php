@@ -11,4 +11,8 @@ class Kriteria_Processor extends Model
     protected $primaryKey = 'id_kriteria_processor';
 
     protected $guarded = ['id_kriteria_processor'];
+
+    public function nilai(){
+        return $this->hasMany(Nilai::class);
+    }
 }

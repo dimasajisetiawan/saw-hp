@@ -16,6 +16,10 @@ class Smartphone extends Model
 
     public function User()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class,'id_user');
+    }
+
+    public function nilai(){
+        return $this->hasMany(Nilai::class);
     }
 }

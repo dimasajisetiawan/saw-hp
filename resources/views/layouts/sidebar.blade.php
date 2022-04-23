@@ -47,7 +47,7 @@
         </a>
       </li>
       <li class="nav-item {{ Request::is('nilai') ? 'menu-is-opening menu-open' : "" }}"">
-        <a href="/dashboard" class="nav-link {{ Request::is('nilai') ? 'active' : "" }}">
+        <a href="/nilai" class="nav-link {{ Request::is('nilai') ? 'active' : "" }}">
           <i class="nav-icon fas fa-file-alt"></i>
           <p>
             Nilai

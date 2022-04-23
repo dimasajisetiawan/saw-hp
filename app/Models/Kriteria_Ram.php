@@ -11,4 +11,8 @@ class Kriteria_Ram extends Model
     protected $primaryKey = 'id_kriteria_ram';
 
     protected $guarded = ['id_kriteria_ram'];
+
+    public function nilai(){
+        return $this->hasMany(Nilai::class);
+    }
 }

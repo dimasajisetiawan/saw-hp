@@ -11,4 +11,8 @@ class Kriteria_Slot_Sim extends Model
     protected $primaryKey = 'id_kriteria_slot_sim';
 
     protected $guarded = ['id_kriteria_slot_sim'];
+
+    public function nilai(){
+        return $this->hasMany(Nilai::class);
+    }
 }

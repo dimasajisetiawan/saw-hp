@@ -33,4 +33,11 @@
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{ asset('') }}asset/dist/js/pages/dashboard.js"></script>
 
+<script src="{{ asset('') }}asset/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="{{ asset('') }}asset/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="{{ asset('') }}asset/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="{{ asset('') }}asset/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="{{ asset('') }}asset/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="{{ asset('') }}asset/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>

@@ -11,4 +11,8 @@ class Kriteria_Harga extends Model
     protected $primaryKey = 'id_kriteria_harga';
 
     protected $guarded = ['id_kriteria_harga'];
+
+    public function nilai(){
+        return $this->hasMany(Nilai::class);
+    }
 }

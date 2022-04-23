@@ -52,7 +52,7 @@
                 <div class="card-header ">
                     <div class="container-fluid">
                         <h3 class="card-title" style="inline-block">Daftar Smartphone + Penilaian</h3>
-                        <a class="btn btn-sm btn-primary float-right" style="inline-block" href="#">Tambah Smartphone + Penilian</a>
+                        <a class="btn btn-sm btn-primary float-right" style="inline-block" href="/data_smartphone/create_smartphone_with_value">Tambah Smartphone + Penilian</a>
 
                     </div>
 
@@ -73,20 +73,24 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {{-- <tr>
-                                @foreach ($handphone as $hp)
-                                    <td>{{ ($handphone->currentPage() - 1) * $handphone->perPage() + $loop->iteration }}
+                            <tr>
+                                @foreach ($nilai as $n)
+                                    <td>{{ ($nilai->currentPage() - 1) * $nilai->perPage() + $loop->iteration }}
                                     </td>
-                                    <td>{{ $hp->merek_handphone }}</td>
-                                    <td>{{ $hp->type_handphone }}</td>
+                                    <td>{{ $n->smartphone->merek_handphone }} {{ $n->smartphone->type_handphone }}</td>
+                                    <td>{{ $n->kriteria_penyimpanan->pilihan_kriteria }} </td>
+                                    <td>{{ $n->kriteria_ram->pilihan_kriteria }} </td>
+                                    <td>{{ $n->kriteria_processor->pilihan_kriteria }} </td>
+                                    <td>{{ $n->kriteria_harga->pilihan_kriteria }} </td>
+                                    <td>{{ $n->kriteria_slot_sim->pilihan_kriteria }} </td>
                                     <td>
                                         <a class="btn btn-warning"
-                                            href="/data_smartphone/edit_smartphone/{{ $hp->id_smartphone }}"> Ubah</a>
+                                            href="/data_smartphone/edit_smartphone/{{ $n->id_smartphone }}"> Ubah</a>
                                         <a class="btn btn-danger"
-                                            href="/data_smartphone/delete_smartphone/{{ $hp->id_smartphone }}"> Hapus</a>
+                                            href="/data_smartphone/delete_smartphone/{{ $n->id_smartphone }}"> Hapus</a>
                                     </td>
                             </tr>
-                            @endforeach --}}
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
