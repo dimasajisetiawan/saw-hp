@@ -28,7 +28,7 @@
                 <div class="card-body">
                 @csrf
                 <div class="form-group">
-                  <label for="kriteria_processor" class="form-label">id_Kriteria Processor</label>
+                  <label for="kriteria_processor" class="form-label">Kriteria Processor</label>
                   <select class="form-control col-8 @error('kriteria_processor') is-invalid @enderror"" name="id_kriteria_processor">
                     @foreach ($kriteria_processor as $kp)
                     @if( $idp == $kp->id_kriteria_processor)
@@ -80,7 +80,7 @@
                   </div>
                   <div class="form-group">
                     <label for="kriteria_slot_sim" class="form-label">Kriteria Slot Sim</label>
-                    <select class="form-control col-8 @error('kriteria_slot_sim') is-invalid @enderror"" name="id_kriteria_slot_sim">                  
+                    <select class="form-control col-8 @error('kriteria_slot_sim') is-invalid @enderror"" name="id_kriteria_slot_sim">
                     @foreach ($kriteria_slot_sim as $kss)
                       @if( $idss == $kss->id_kriteria_slot_sim)
                       <option value="{{ $kss->id_kriteria_slot_sim }}" selected>{{ $kss->pilihan_kriteria }}</option>
@@ -113,7 +113,7 @@
                     @enderror
                   </div>
                   <div class="form-group">
-                    <label for="smartphone" class="form-label">Kriteria Processor</label>
+                    <label for="smartphone" class="form-label">Smartphone</label>
                     <select class="form-control col-8 @error('smartphone') is-invalid @enderror"" name="id_smartphone">
                       @foreach ($smartphone as $sp)
                       @if( $ids == $sp->id_smartphone)

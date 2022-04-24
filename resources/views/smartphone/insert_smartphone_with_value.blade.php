@@ -18,7 +18,7 @@
                 <div class="card-body">
                 @csrf
                 <div class="form-group">
-                  <label for="kriteria_processor" class="form-label">id_Kriteria Processor</label>
+                  <label for="kriteria_processor" class="form-label">Kriteria Processor</label>
                   <select class="form-control col-8 @error('kriteria_processor') is-invalid @enderror"" name="id_kriteria_processor">
                     @foreach ($kriteria_processor as $kp)
                     @if(old('id_kriteria_processor') == $kp->id_kriteria_processor)
@@ -103,7 +103,7 @@
                     @enderror
                   </div>
                   <div class="form-group">
-                    <label for="smartphone" class="form-label">Kriteria Processor</label>
+                    <label for="smartphone" class="form-label">Smartphone</label>
                     <select class="form-control col-8 @error('smartphone') is-invalid @enderror"" name="id_smartphone">
                       @foreach ($smartphone as $sp)
                       @if(old('id_smartphone') == $sp->id_smartphone)
