@@ -130,20 +130,23 @@
             </div>
         </div>
         <div class="row p-3">
-            <div class="col-xl-12">
+            <div class="col-xl-7">
             <div class="card card-info card-outline shadow">
                 <div class="card-header ">
                     <div class="container-fluid">
                         <h3 class="card-title" style="inline-block">Nilai Rangking</h3>
-
                     </div>
-
                 </div>
+                <?php 
+                $valarray = [];
+                $v = 1;
+                ?>
                 <!-- /.card-header -->
                 <div class="card-body">
                     <table class="table table-bordered data">
                         <thead>
                             <tr>
+                                <th scope="col">Kode</th>
                                 <th scope="col">Alternatif</th>
                                 <th scope="col">Nilai</th>
                             </tr>
@@ -151,16 +154,58 @@
                         <tbody>
                             <tr>
                                 @foreach ($nilai as $n)
-                                    <td>{{ $n->smartphone->merek_handphone }} {{ $n->smartphone->type_handphone }}</td>
-                                    <td>{{ round( (($n->kriteria_penyimpanan->bobot_kriteria/100)*$n->kriteria_penyimpanan->bobot_kriteria/ $nilai->max('sum_kriteria_penyimpanan'))
+                                    <td>V{{$v}}</td>
+                                    <td><?php $brand = $n->smartphone->merek_handphone . " " . $n->smartphone->type_handphone ?> {{$brand}}</td>
+                                    <td>
+                                    <?php 
+                                    $value = round( (($n->kriteria_penyimpanan->bobot_kriteria/100)*$n->kriteria_penyimpanan->bobot_kriteria/ $nilai->max('sum_kriteria_penyimpanan'))
                                     + (($n->kriteria_ram->bobot_kriteria/100)*$n->kriteria_ram->bobot_kriteria/ $nilai->max('sum_kriteria_ram'))
                                     + (($n->kriteria_processor->bobot_kriteria/100)*$n->kriteria_processor->bobot_kriteria/ $nilai->max('sum_kriteria_processor'))
                                     + (($n->kriteria_harga->bobot_kriteria/100)*$nilai->min('sum_kriteria_harga') / $n->kriteria_harga->bobot_kriteria)
-                                    + (($n->kriteria_slot_sim->bobot_kriteria/100)*$n->kriteria_slot_sim->bobot_kriteria/ $nilai->max('sum_kriteria_slot_sim')),4)}} </td>
+                                    + (($n->kriteria_slot_sim->bobot_kriteria/100)*$n->kriteria_slot_sim->bobot_kriteria/ $nilai->max('sum_kriteria_slot_sim')),4);
+
+                                    //array_push($valarray, $value);
+                                    $out = [
+                                        'kode' => $v,
+                                        'brand' => $brand,
+                                        'val' => $value
+                                    ];
+                                    array_push($valarray, $out);
+                                    $v++;
+                                    ?>
+                                    {{$value}}</td>
                             </tr>
                             @endforeach
                         </tbody>
                     </table>
+                </div>
+            </div>
+            </div>
+            <div class="col-x2" style="width: 41% ">
+            <div class="card card-info card-outline shadow">
+                <div class="card-header ">
+                    <div class="container-fluid">
+                        <h3 class="card-title" style="inline-block">Kesimpulan Rangking</h3>
+                    </div>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <?php
+                    $arrVal = [];
+                    foreach($valarray as $va => $nil){
+                        array_push($arrVal,$nil['val']);
+                        $max = max($arrVal);
+                        if(in_array($max, $nil)){
+                            $kode = $nil['kode'];
+                            $brand = $nil['brand'];
+                        }
+                    }
+                    //if(in_array($max, $va)){
+                       // echo $va['brand'].' ttttt ';
+                    //}//
+                    ?>
+                    Dari Hasil perhitungan Rangking di samping, maka pemilihan Smartphone terbaik adalah V{{$kode}} dengan nilai {{$max}} yaitu Smartphone {{$brand}}.
+                    
                 </div>
             </div>
             </div>

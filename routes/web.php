@@ -46,4 +46,12 @@ Route::get('/data_smartphone/create_smartphone_with_value', [SmartphoneControlle
 Route::post('/data_smartphone/create_smartphone/process', [SmartphoneController::class,'insert_smartphone'])->middleware('auth');
 Route::post('/data_smartphone/create_smartphone_with_value/process', [SmartphoneController::class,'insert_smartphone_with_value'])->middleware('auth');
 
+Route::get('/data_smartphone/edit_smartphone/{id}', [SmartphoneController::class,'edit_smartphone'])->middleware('auth');
+Route::post('/edit_smartphone/{id}', [SmartphoneController::class,'update_edit_smartphone'])->middleware('auth');
+Route::get('/delete_smartphone/{id}', [SmartphoneController::class,'delete_smartphone'])->middleware('auth');
+
+Route::get('/data_smartphone/edit_smartphone_penilaian/{id}', [SmartphoneController::class,'edit_smartphone_penilaian'])->middleware('auth');
+Route::post('update_smartphone_with_value/{id}', [SmartphoneController::class,'update_smartphone_with_value'])->middleware('auth');
+Route::get('/delete_smartphone_penilaian/{id}', [SmartphoneController::class,'delete_smartphone_penilaian'])->middleware('auth');
+
 Route::get('/nilai',[NilaiController::class,'index'])->middleware('auth');

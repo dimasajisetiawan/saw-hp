@@ -21,7 +21,7 @@
                             <tr>
                                 <th scope="col">No</th>
                                 <th scope="col">Merek Smartphone</th>
-                                <th scope="col">Type Smartphone</th>
+                                <th scope="col" >Type Smartphone</th>
                                 <th scope="col">Opsi</th>
                             </tr>
                         </thead>
@@ -36,7 +36,7 @@
                                         <a class="btn btn-warning"
                                             href="/data_smartphone/edit_smartphone/{{ $hp->id_smartphone }}"> Ubah</a>
                                         <a class="btn btn-danger"
-                                            href="/data_smartphone/delete_smartphone/{{ $hp->id_smartphone }}"> Hapus</a>
+                                            href="delete_smartphone/{{ $hp->id_smartphone }}"> Hapus</a>
                                     </td>
                             </tr>
                             @endforeach
@@ -85,9 +85,9 @@
                                     <td>{{ $n->kriteria_slot_sim->pilihan_kriteria }} </td>
                                     <td>
                                         <a class="btn btn-warning"
-                                            href="/data_smartphone/edit_smartphone/{{ $n->id_smartphone }}"> Ubah</a>
+                                            href="/data_smartphone/edit_smartphone_penilaian/{{ $n->id_nilai }}"> Ubah</a>
                                         <a class="btn btn-danger"
-                                            href="/data_smartphone/delete_smartphone/{{ $n->id_smartphone }}"> Hapus</a>
+                                            href="delete_smartphone_penilaian/{{ $n->id_nilai }}"> Hapus</a>
                                     </td>
                             </tr>
                             @endforeach
